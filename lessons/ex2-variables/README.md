@@ -22,6 +22,7 @@ use a variable that you've declared.
 
 In C, variables are declared as follows:
 
+```
   The type of the variable, in the case int, which is a 32-bit (4 byte) signed integer
    |
    |    The name of the variable
@@ -30,11 +31,13 @@ In C, variables are declared as follows:
    v       v
   --- -----------
   int my_variable;
+```  
 
 There are many different "types" that C supports. The sizes are sometimes platform=specfic,
 but for a modern C compiler running on a 64-bit operating system, these are the typical
 sizes.
 
+```
 Type             Description/Size                     Range
 ----             ----------------                     -------------------
 char             A signed 8-bit (1 byte) value        -128 to 127
@@ -45,6 +48,7 @@ int              A signed 32-bit (4 byte) value       -2^31 to 2^31 - 1
 unsigned int     An unsigned 32-bit (4 byte) value    0 to 2^32 - 1
 long             A signed 64-bit (8 byte) value       -2^63 to 2^63 - 1
 unsigned long    An unsigned 64-bit (8 byte value)    0 to 2^64 - 1
+```
 
 For now, we're only going to be dealing with plain ole "int", so you don't need to worry
 about the other types.
@@ -58,14 +62,18 @@ Initializing Variables
 
 We can use the "=" operator to assign a value to the variable when we declare it, like so:
 
+```
   int month = 4;
   int day = 19;
   int year = 2019;
+```  
 
 To shorten the initialization process we can do everything on one line separated with commands,
 like this:
 
+```
   int month = 4, int day = 19, int year = 2019;
+```  
 
 Printing Variables
 ==================
@@ -76,12 +84,16 @@ many other format specifiers, but we're only going to use %d for now.
 
 We can combine the format specifier with other text, like this:
 
+```
   int year = 1732;
   printf("George Washington was born in %d\n", year);
+```  
 
 This will print:
 ----------------
+```
 George Washington was born in 1732
+```
 
 Exercise
 ========
@@ -98,9 +110,11 @@ Print out the three values and their associated names, one per line.
 
 Sample Output
 =============
+```
 a = 10
 b = ?? some random value here ??
 c = 20
 x = 10
 y = 20
 z = 30
+```
