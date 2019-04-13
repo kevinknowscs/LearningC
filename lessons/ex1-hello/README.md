@@ -35,6 +35,10 @@ stands for "input/output". So to use printf, we need to include the file "stdio.
 #include <stdio.h>
 ```
 
+I've purposely left out a lot of details about include statements, but this is all 
+you need to know for now. For the next several lessons, you'll include this line
+at the top of every C program you write.
+
 Comments
 ========
 
@@ -64,21 +68,113 @@ ignored by the compiler.
 printf("Here is some code");
 ```
 
+Personally I prefer to use line comments most of the time.
+
 The Main Function
 =================
 
-Discuss the main function
+When you run your program, the operating system needs to know the "entry point" of your
+program. The entry point designates the very first line of code that will execute when
+your program first starts running.
+
+In C, the program entry point in designated with a special function called "main". The
+beginning of the main function looks like this:
+
+```
+int main()
+{
+```
+
+The "int" declares that the function will return an integer value. Don't worry about return
+values right now; we'll discuss those in another lesson.
+
+Next comes the name of the function - in this case "main", which is a special function that
+designates the start of the program. Any time you write a program in C, it must have a main
+function in it somewhere.
+
+The open and closing parenthesis after main designates that this function takes no parameters.
+If the function took parameters, we could put them inside the paranthesis. Don't worry about
+function parameters for now. We'll discuss those in a separate lesson.
+
+Finally, the open curly brace tells the compiler that we've finished declaring the name of
+our function and we're ready to start writing the code that will go inside the function.
+
+As with a lot of things in C, there are more details that I've left out. I want to stay focused
+on the important details, and leave off unnecessary details that we can learn more about later.
 
 Printing Output
 ===============
 
-Discuss how to use printf.
+Now that we're inside the function, we can use the printf command to print something on the
+screen.
+
+```
+   This is the name of the function we're going to call (printf)
+    |
+    |  The double quote marks
+    |  the beginning of a "string"
+    |  of text
+    |    |
+    |    |        The \n is how we tell
+    |    |        the computer to move the
+    |    |        cursor to the next line
+    |    |        on the computer screen
+    |    |            |
+    |    |            | The closing parenthesis marks
+    |    |            | the end of the parameters to
+    |    |            | the printf function
+    |    |            |  |
+    |    |            |  |
+    v    v            v  v
+  ------ -            -- -                                
+  printf("Hello, World\n");
+        - ------------  - -
+        ^      ^        ^ ^
+        |      |        | |
+        |      |        | |
+        |      |        | The semicolon marks the end of the statement.
+        |      |        | In C, all statements end with a semicolon.
+        |      |        |
+        |      |     The closing double quotes indicates
+        |      |     the end of the text we want to print
+        |      |
+        |   Here is the actual text we
+        |   want to print
+        |
+      The open parenthesis begins the
+      area where we are going to pass
+      parameters to the function
+```      
 
 Ending the Program
 ==================
 
-Discuss the return statement and the closing curly brace.
+We've written most of our program. There's only two things left.
+
+First, since the main function returns an integer value, we want to use the return
+statement to specify what value to return. In the case of the main function, we should
+always return 0 to designate to the operating system that the program completely normally
+and did not encounter any errors.
+
+Therefore, we insert the return statement:
+
+```
+  return 0;
+```  
+
+Finally, we insert a closing curly brace to close out the function. The closing curly brace
+matches the opening curly brace that we put right after the main function declaration.
 
 Exercise
 ========
 
+Write a program that prints two lines of output. The first line
+should say "Greetings professor Falken". The second line should say
+"Shall we play a game?"
+
+Expected output:
+
+```
+Greetings professor Falken
+Shall we play a game?
+```
