@@ -19,6 +19,59 @@ You already know everything you need to write this program:
 
 Let's put it all together into an actual program.
 
+Printing Multiple Numbers with Printf
+=====================================
+
+You can place more than one %d in your format specifier, such as:
+
+```
+        The first parameter goes to the first %d
+        +-----------------------------------+
+        |                                   | Third parameter, third %d
+        |                      +------------|-----+
+        |                      |            |     |
+        v                      v            |     |
+printf("%d potato, %d potato, %d potato\n", 1, 2, 3);
+                    ^                          |
+                    |                          |
+                    +--------------------------+
+                    The second parameter goes to
+                    the second %d
+```
+
+This will print:
+
+```
+1 potato, 2 potato, 3 potato
+```
+
+Here's another example:
+
+```
+int month = 2;
+int day = 22;
+int year 1732;
+
+printf("George Washington was born %d/%d in %d\n", month, day, year);
+```
+
+This wil print:
+
+```
+George Washington was born 2/22 in 1732
+```
+
+Procedure
+=========
+
+To write the program below, you should have 5 lines of code inside your main function.
+
+* Print "Enter your first number: " (don't put the \n in there - leaving the cursor on the same line)
+* Use scanf to read in the first number to a variable
+* Print "Enter your second number: " (again, no \n)
+* Use scanf to read in the second number to a variable
+* Print the full equation using a printf with 3 %d's in the format specifier
+
 Exercise
 ========
 
