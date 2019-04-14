@@ -26,6 +26,7 @@ do
 {
   // Your code here
 } while (condition);
+```
 
 For the condition part of the loop, you can put in the same kind of conditional
 expressions that you learned about in the last lesson.
