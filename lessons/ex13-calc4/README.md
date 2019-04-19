@@ -20,6 +20,7 @@ It would look like this:
 
   do
   {
+    ... the calculator main menu loop ...
   } while (choice != 0);
 ```
 
