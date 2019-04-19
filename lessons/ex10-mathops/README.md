@@ -25,7 +25,7 @@ example, if I say
 x++;
 ```
 
-The ++ operator is performing it's function again the variable x. The "thing" that an operator
+The ++ operator is performing its function against the variable x. The "thing" that an operator
 performs its function against is called an "operand". So a unary operator operates on one
 operand.
 
@@ -148,7 +148,7 @@ Why? We have to think back to when we learned long division in grade school. Lik
 
 ```
 
-    2 remainder of 4
+    2 remainder of 1
   __________
 4 ) 9
     8
@@ -156,7 +156,7 @@ Why? We have to think back to when we learned long division in grade school. Lik
     1
 ```    
 
-From the perspective of integer division, 9 divided by 4 is a two part answer: 2 with a remainder of 4. 
+From the perspective of integer division, 9 divided by 4 is a two part answer: 2 with a remainder of 1. 
 The division operator gives us the first part of the answer. The % operator, called "modulo" (don't ask
 me why it's called that), gives us the second part of the answer - the remainder.
 
