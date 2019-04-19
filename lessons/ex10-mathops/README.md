@@ -131,7 +131,74 @@ simple mathematical expressions for the next several lessons.
 Integer Division
 ----------------
 
+Up until now, and for the next several lessons, we are focusing strictly on integer math. C also
+supports real numbers with decimal points in them (C calls the "floating point" numbers), but we're
+working only with integers.
+
+When we perform division on integers, we only get integer results. So for example, if you perform
+
+```
+9 / 4
+```
+
+on your calculator, you'll get 2.25 as a result. But that's not what C will give you. C will just give
+you 2, not 2.25.
+
+Why? We have to think back to when we learned long division in grade school. Like this:
+
+```
+
+    2 remainder of 4
+  __________
+4 ) 9
+    8
+    ---
+    1
+```    
+
+From the perspective of integer division, 9 divided by 4 is a two part answer: 2 with a remainder of 4. 
+The division operator gives us the first part of the answer. The % operator, called "modulo" (don't ask
+me why it's called that), gives us the second part of the answer - the remainder.
+
+Therefore:
+
+```
+printf("9 / 4 = %d with a remainder of %d\n", 9 / 4, 9 % 4);
+```
+
+will print:
+
+```
+9 / 4 = 2 with a remainder of 1
+```
+
 Exercise
 ========
 
-Write a program that declares ...
+What does the following program print?
+
+```
+#include <stdio.h>
+
+int main()
+{
+  int a, b, c, d;
+  int x = 30, y = 40, z = 50;
+
+  a = x - y;
+  y -= 5;
+  b = z * 3;
+  c = y / 9;
+  d = y % 9;
+  x *= 2;
+
+  printf("a = %d\n", a);
+  printf("b = %d\n", b);
+  printf("c = %d\n", c);
+  printf("d = %d\n", d);
+  printf("x = %d\n", x);
+  printf("y = %d\n", y);
+  printf("z = %d\n", );
+
+  return 0;
+}
