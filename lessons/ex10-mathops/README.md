@@ -114,6 +114,20 @@ The equal operator operates on the left hand side, x, and the right hand side, w
 result of adding y and z together.
 ```
 
+We can string operators together to form longer, complex expressions. For example, to add b, c, and d
+together, assigning the result to d, we can write:
+
+```
+a = b + c + d;
+```
+
+If you remember back to algebra class you might recall that mathematical operators get applied in a
+certain order. I'm not going to cover that in this lesson, but suffice it to say that C follows the
+same order of operation rules that you covered in algebra class, and you can also use parentheses in
+expressions just like you do in algebra. If you need a refresher on order of operations, I suggest you
+Google for "algebra pemdas", but it's not necessary for right now. We are going to be focusing on very
+simple mathematical expressions for the next several lessons.
+
 Integer Division
 ----------------
 
