@@ -181,7 +181,7 @@ for x < 10 would be false (because x is equal to 10, not less than 10), and the 
 and we would miss the last number that we wanted to print.
 
 Counting from 1 to 10 with a 0-based Loop
-=========================================
+-----------------------------------------
 
 We can do the exact same thing as above using a 0-based loop. Here's what it looks like:
 
@@ -239,8 +239,10 @@ the access into the array is an index, it makes sense to name your loop control 
 Exercise
 ========
 
-Write a program that counts from 1 to 50 and prints out the number and the square of
+Write TWO programs that counts from 1 to 50 and prints out the number and the square of
 each number.
+
+For the first program use a 0-based loop. For the second program use a 1-based loop.
 
 Sample Output:
 
