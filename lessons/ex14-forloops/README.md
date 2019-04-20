@@ -239,10 +239,13 @@ the access into the array is an index, it makes sense to name your loop control 
 Exercise
 ========
 
-Write TWO programs that counts from 1 to 50 and prints out the number and the square of
+Write THREE programs that counts from 1 to 50 and prints out the number and the square of
 each number.
 
-For the first program use a 0-based loop. For the second program use a 1-based loop.
+For the first program use a 0-based loop. For the second program use a 1-based loop. For
+the third program, purposely introduce a bug in your program by writing an off-by-one error.
+I don't care if it prints 1 to many times or 1 too few times - just introduce some kind
+of off-by-one error.
 
 Sample Output:
 
