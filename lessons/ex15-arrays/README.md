@@ -30,7 +30,10 @@ For that reason, I'm going to adopt the following convention:
 * When I want to use a humanized, 1-based system, I will always spell it out in words
   such as "first", "second", "third", and "last".
 * I will always use capital N to assume that we are talking about the size of the
-  array  
+  array 
+* When printing something to the user or asking them for input, I will always convert
+  the index into a 1-based number and put a # sign in front to be clear that I'm 
+  talking about human-readable numbering. I'll show how to do that shortly.   
 
 Let's see how that convention works out. I can say:
 
@@ -133,6 +136,31 @@ for (int index=0; index < num_of_sudents; index++)
 }
 ```
 
+Converting to Human-Readable Numbering
+======================================
+
+Most people don't think of a list of things as starting at the number 0. Therefore, it's
+convenient and more user-friendly if we convert our 0-based indexes into 1-based indexes
+when we print them. By convention, I'll put a number sign (#) in front of it to indicate
+it is a human-readable number. This is just my own convention that I invented for the purpose
+of teaching arrays. It's not a standard that other programmers follow.
+
+```
+                                Add 1 to the index to convert to
+                                human readable numbering
+                                     |
+                                     v
+                                  -------
+printf("Student #%d scored %d\n", index+1, student_scores[index]);
+```
+
+I can do the same thing when I prompt for input:
+
+```
+printf("Enter score for Student #%d\n", index+1);
+scanf("%d", &student_scores[index]);
+```
+
 Initializing Arrays
 ===================
 
@@ -184,5 +212,21 @@ Student #4 : Score = 65, Grade = D
 Student #5 : Score = 55, Grade = F
 ```
 
+Hint: Since we haven't covered how to store things like "A", "B", etc. into a variable,
+it's okay to repeat a block of code with different grades, like this:
 
+```
+if ( /* your code to check for student score in the A range */ )
+{
+  printf("You got an A\n");
+}
+else if ( /* your code to check for student score in the B range */ )
+{
+  printf("You got a B\n");
+}
+... etc ...
+```
 
+There's a little bit of repeated code and therefore a slight DRY violation, but that's okay.
+In some later lessons we'll learn about strings and functions, which will give us some more
+techniques for avoiding repeated code like this.
