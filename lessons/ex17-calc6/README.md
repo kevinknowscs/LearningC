@@ -58,6 +58,7 @@ if (choice == /* whatever the corresponding menu item is */)
   // Add the two numbers and store the result
   results[result_index] = results[first_index] + results[second_index];
 }
+```
 
 For division, let's make it two distinct operations, one for the dividend and
 one for the remainder. So our calculator will have 5 mathematical functions.
